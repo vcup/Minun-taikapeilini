@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-start w-screen h-screen" @wheel="handleScroll">
+  <div class="flex w-screen h-screen" @wheel="handleScroll">
     <UVerticalNavigation :links="links" class="w-96 px-5 py-32" />
     <slot />
   </div>

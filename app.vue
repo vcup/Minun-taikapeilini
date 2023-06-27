@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout>
-    <main>
-      <NuxtPage />
+    <main class="grow flex">
+      <NuxtPage class="grow" />
     </main>
   </NuxtLayout>
 </template>
