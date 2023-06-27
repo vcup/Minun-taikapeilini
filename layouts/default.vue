@@ -16,7 +16,12 @@ const links = [
     label: 'WorldMap',
     icon: 'i-heroicons-map',
     to: '/world-map',
-  }
+  },
+  {
+    label: 'Transition Config',
+    icon: 'i-heroicons-adjustments-horizontal',
+    to: '/transition-config',
+  },
 ]
 const router = useRouter()
 function handleScroll(event: WheelEvent) {
