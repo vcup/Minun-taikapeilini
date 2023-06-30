@@ -6,7 +6,7 @@ import MapProperty from 'ol/MapProperty'
 export default function () {
   if (!process.client) return null
 
-  const map = useState(() => new Map({
+  const map = useState('ol-world-map', () => new Map({
     layers: [
       new TileLayer({
           source: new OSM(),
