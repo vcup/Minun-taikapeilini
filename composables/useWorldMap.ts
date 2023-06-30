@@ -22,6 +22,8 @@ export default function () {
     })
   })).value
 
+  // Calling private method Map.handleTargetChanged_
+  // That make sure map will mount into target each call useWorldMap()
   onMounted(() => map.notify(MapProperty.TARGET, 'world-map'))
   return map
 }
