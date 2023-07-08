@@ -6,7 +6,7 @@ import MapProperty from 'ol/MapProperty'
 export default function () {
   if (!process.client) return null
 
-  const map = useState(() => new Map({
+  const map = useState('ol-world-map', () => new Map({
     layers: [
       new TileLayer({
           source: new OSM(),
@@ -22,6 +22,8 @@ export default function () {
     })
   })).value
 
+  // Calling private method Map.handleTargetChanged_
+  // That make sure map will mount into target each call useWorldMap()
   onMounted(() => map.notify(MapProperty.TARGET, 'world-map'))
   return map
 }
