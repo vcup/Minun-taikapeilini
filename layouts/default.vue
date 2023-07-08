@@ -6,6 +6,8 @@
 </template>
 
 <script setup lang="ts">
+import { returnOrUpdate } from 'ol/extent';
+
 const links = [
   {
     label: 'Home',
@@ -25,15 +27,17 @@ const links = [
 ]
 const router = useRouter()
 function handleScroll(event: WheelEvent) {
-  if (event.ctrlKey || event.altKey || event.shiftKey) return
-  const currentPath = router.currentRoute.value.path
-  const isScrollDown = event.deltaY > 0;
-  for (let i = 0; i < links.length; i++) {
-    if (links[i].to !== currentPath) continue
-    if (isScrollDown && ++i >= links.length) break
-    if (!isScrollDown && --i < 0) break
-    navigateTo(links[i].to, { replace: true })
-    break
-  }
+  if (event.ctrlKey || event.altKey || event.shiftKey) {
+      const currentPath = router.currentRoute.value.path
+      const isScrollDown = event.deltaY > 0;
+      for (let i = 0; i < links.length; i++) {
+        if (links[i].to !== currentPath) continue
+        if (isScrollDown && ++i >= links.length) break
+        if (!isScrollDown && --i < 0) break
+        navigateTo(links[i].to, { replace: true })
+        break
+      }
+    }
+  return
 }
 </script>
