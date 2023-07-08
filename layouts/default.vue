@@ -6,6 +6,8 @@
 </template>
 
 <script setup lang="ts">
+import { returnOrUpdate } from 'ol/extent';
+
 const links = [
   {
     label: 'Home',
@@ -36,5 +38,6 @@ function handleScroll(event: WheelEvent) {
         break
       }
     }
+  return
 }
 </script>
