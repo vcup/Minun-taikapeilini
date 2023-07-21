@@ -22,7 +22,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^0.6.4",
+    "@nuxt/devtools": "^0.7.0",
     "@nuxthq/ui": "^2.2.1",
     "@nuxtjs/i18n": "8.0.0-beta.13",
     "@types/node": "^20.3.2",
